@@ -152,6 +152,7 @@ def get_cloud_resource_inventory_report(helper, api_url, bearer_token, rn, repor
                     json_object['subscriptionID'] = row['Subscription ID']
                     json_object['projects'] = row['Projects']
                     json_object['region'] = row['Region']
+                    json_object['wizJsonObject'] = row['Wiz JSON Object']
                     data.append(json_object)
                 except json.JSONDecodeError as e:
                     helper.log_error(f"Failed to decode JSON. {e}")
@@ -170,7 +171,7 @@ def collect_events(helper, ew):
     global_account = helper.get_arg('global_account')
     CLIENT_ID = global_account['username']
     CLIENT_SECRET= global_account['password']
-    url = helper.get_global_setting("api_endpoint_url")
+    url = helper.get_arg("api_endpoint_url")
     project_id = helper.get_arg('project_id')
     
     current_epoch = int(time.time())

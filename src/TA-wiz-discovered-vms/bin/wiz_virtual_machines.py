@@ -54,6 +54,10 @@ class ModInputwiz_virtual_machines(modinput_wrapper.base_modinput.BaseModInput):
                                          description="Enter the Wiz Project ID to narrow down your report. Leave the asterisk (*) to select all projects.",
                                          required_on_create=True,
                                          required_on_edit=False))
+        scheme.add_argument(smi.Argument("api_endpoint_url", title="API Endpoint URL",
+                                         description="Example: https://api.us5.app.wiz.io/graphql",
+                                         required_on_create=True,
+                                         required_on_edit=False))
         return scheme
 
     def get_app_name(self):

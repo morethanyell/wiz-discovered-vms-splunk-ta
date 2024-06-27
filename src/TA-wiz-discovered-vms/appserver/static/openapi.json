@@ -81,22 +81,6 @@
                     }
                 }
             },
-            "additional_parameters": {
-                "type": "object",
-                "properties": {
-                    "api_endpoint_url": {
-                        "type": "string"
-                    }
-                }
-            },
-            "additional_parameters_without_name": {
-                "type": "object",
-                "properties": {
-                    "api_endpoint_url": {
-                        "type": "string"
-                    }
-                }
-            },
             "wiz_virtual_machines": {
                 "type": "object",
                 "properties": {
@@ -113,6 +97,9 @@
                         "type": "string"
                     },
                     "project_id": {
+                        "type": "string"
+                    },
+                    "api_endpoint_url": {
                         "type": "string"
                     },
                     "disabled": {
@@ -137,6 +124,9 @@
                         "type": "string"
                     },
                     "project_id": {
+                        "type": "string"
+                    },
+                    "api_endpoint_url": {
                         "type": "string"
                     },
                     "disabled": {
@@ -164,6 +154,9 @@
                         "type": "string"
                     },
                     "project_id": {
+                        "type": "string"
+                    },
+                    "api_endpoint_url": {
                         "type": "string"
                     }
                 }
@@ -468,97 +461,6 @@
                         "application/x-www-form-urlencoded": {
                             "schema": {
                                 "$ref": "#/components/schemas/logging"
-                            }
-                        }
-                    },
-                    "required": false
-                },
-                "deprecated": false
-            },
-            "parameters": [
-                {
-                    "name": "output_mode",
-                    "in": "query",
-                    "required": true,
-                    "description": "Output mode",
-                    "schema": {
-                        "type": "string",
-                        "enum": [
-                            "json"
-                        ],
-                        "default": "json"
-                    }
-                }
-            ]
-        },
-        "/TA_wiz_discovered_vms_settings/additional_parameters": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "Get list of items for additional_parameters",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "entry": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "content": {
-                                                        "$ref": "#/components/schemas/additional_parameters_without_name"
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "description": "Get list of items for additional_parameters",
-                "deprecated": false
-            },
-            "post": {
-                "responses": {
-                    "200": {
-                        "description": "Create item in additional_parameters",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "entry": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "name": {
-                                                        "type": "string"
-                                                    },
-                                                    "content": {
-                                                        "$ref": "#/components/schemas/additional_parameters_without_name"
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "description": "Create item in additional_parameters",
-                "requestBody": {
-                    "content": {
-                        "application/x-www-form-urlencoded": {
-                            "schema": {
-                                "$ref": "#/components/schemas/additional_parameters"
                             }
                         }
                     },

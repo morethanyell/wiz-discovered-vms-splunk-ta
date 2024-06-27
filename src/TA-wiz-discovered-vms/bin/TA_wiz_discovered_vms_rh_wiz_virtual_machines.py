@@ -50,6 +50,16 @@ fields = [
             max_len=8192, 
         )
     ), 
+    field.RestField(
+        'api_endpoint_url',
+        required=True,
+        encrypted=False,
+        default=None,
+        validator=validator.String(
+            min_len=0, 
+            max_len=8192, 
+        )
+    ), 
 
     field.RestField(
         'disabled',

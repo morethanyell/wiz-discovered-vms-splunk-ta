@@ -25,26 +25,10 @@ fields_logging = [
 model_logging = RestModel(fields_logging, name='logging')
 
 
-fields_additional_parameters = [
-    field.RestField(
-        'api_endpoint_url',
-        required=True,
-        encrypted=False,
-        default='',
-        validator=validator.String(
-            min_len=0, 
-            max_len=8192, 
-        )
-    )
-]
-model_additional_parameters = RestModel(fields_additional_parameters, name='additional_parameters')
-
-
 endpoint = MultipleModel(
     'ta_wiz_discovered_vms_settings',
     models=[
-        model_logging, 
-        model_additional_parameters
+        model_logging
     ],
 )
 

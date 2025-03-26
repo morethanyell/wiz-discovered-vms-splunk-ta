@@ -102,6 +102,9 @@
                     "api_endpoint_url": {
                         "type": "string"
                     },
+                    "token_url": {
+                        "type": "string"
+                    },
                     "disabled": {
                         "type": "string",
                         "enum": [
@@ -127,6 +130,9 @@
                         "type": "string"
                     },
                     "api_endpoint_url": {
+                        "type": "string"
+                    },
+                    "token_url": {
                         "type": "string"
                     },
                     "disabled": {
@@ -157,6 +163,9 @@
                         "type": "string"
                     },
                     "api_endpoint_url": {
+                        "type": "string"
+                    },
+                    "token_url": {
                         "type": "string"
                     }
                 }

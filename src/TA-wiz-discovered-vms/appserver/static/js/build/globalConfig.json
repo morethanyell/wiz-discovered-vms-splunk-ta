@@ -178,6 +178,10 @@
                     {
                         "field": "api_endpoint_url",
                         "label": "API Endpoint URL"
+                    },
+                    {
+                        "field": "token_url",
+                        "label": "Token URL"
                     }
                 ],
                 "actions": [
@@ -276,6 +280,21 @@
                             "field": "api_endpoint_url",
                             "label": "API Endpoint URL",
                             "help": "Example: https://api.us5.app.wiz.io/graphql",
+                            "required": true,
+                            "type": "text",
+                            "validators": [
+                                {
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "maxLength": 8192,
+                                    "errorMsg": "Max length of text input is 8192"
+                                }
+                            ]
+                        },
+                        {
+                            "field": "token_url",
+                            "label": "Token URL",
+                            "help": "https://auth.app.wiz.io/oauth/token",
                             "required": true,
                             "type": "text",
                             "validators": [

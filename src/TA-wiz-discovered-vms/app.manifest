@@ -5,13 +5,13 @@
     "id": {
       "group": null,
       "name": "TA-wiz-discovered-vms",
-      "version": "1.1.0"
+      "version": "1.2.0"
     },
     "author": [
       {
         "name": "morethanyell",
-        "email": "daniel.l.astillero@gmail.com",
-        "company": "Verizon Philippines"
+        "email": null,
+        "company": null
       }
     ],
     "releaseDate": null,

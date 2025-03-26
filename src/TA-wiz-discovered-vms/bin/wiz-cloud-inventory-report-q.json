@@ -1,0 +1,18 @@
+{
+    "query": "mutation CreateReport($input: CreateReportInput!) {   createReport(input: $input) {     report {       id     }   } }",
+    "variables": {
+        "input": {
+            "name": "$report_name",
+            "type": "CLOUD_RESOURCE",
+            "projectId": "$project_id",
+            "cloudResourceParams": {
+                "includeCloudNativeJSON": True,
+                "includeWizJSON": True,
+                "entityType": [
+                    "VIRTUAL_MACHINE"
+                ]
+            }
+        }
+    }
+}
+

@@ -58,6 +58,10 @@ class ModInputwiz_virtual_machines(modinput_wrapper.base_modinput.BaseModInput):
                                          description="Example: https://api.us5.app.wiz.io/graphql",
                                          required_on_create=True,
                                          required_on_edit=False))
+        scheme.add_argument(smi.Argument("token_url", title="Token URL",
+                                         description="https://auth.app.wiz.io/oauth/token",
+                                         required_on_create=True,
+                                         required_on_edit=False))
         return scheme
 
     def get_app_name(self):
